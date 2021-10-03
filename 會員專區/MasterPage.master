@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="會員專區_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <title>新世紀醫事檢驗所會員專區</title>
+    <style type="text/css">
+                      
+        h1 {text-align:center; font-family:"微軟正黑體"}
+        h4 {
+            text-align:right;
+        }
+        #center {text-align:center;}
+        body{background-color:#EBEBFF}
+                
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div align="center">
+        <asp:Label ID="Label7" runat="server" Text="新世紀醫事檢驗所會員專區" Font-Bold="True" Font-Names="微軟正黑體 Light" Font-Size="40pt"></asp:Label>
+        <h4>
+            <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>&nbsp; 登入中 &nbsp;
+        <asp:Button ID="Button4" runat="server" Text="登出" OnClick="Button4_Click" CausesValidation="False" />
+        </h4>
+    </div>
+    <div align="center">
+
+        <asp:Button ID="Button1" runat="server" Text="線上預約" OnClick="Button1_Click" CausesValidation="False" />
+        <asp:Button ID="Button2" runat="server" Text="查看檢驗報告" OnClick="Button2_Click" CausesValidation="False" />
+        <asp:Button ID="Button3" runat="server" Text="修改會員資料" OnClick="Button3_Click" CausesValidation="False" />
+    </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div typeof="footer" id="center">
+            <asp:Label ID="Label3" runat="server" Text="營業時間：週一至週六 08 : 30 ~ 19 : 30" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="13pt" ForeColor="#0245A3"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="13pt" ForeColor="#0245A3" Text="地址： 新竹市北區竹光路146號"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="13pt" ForeColor="#0245A3" Text="電話： (03) - 5310345"></asp:Label>
+    </div>
+    </form>
+</body>
+</html>

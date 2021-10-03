@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <title>新世紀醫事檢驗所</title>
+
+    <style type="text/css">
+#container{
+    width:1000px;
+    margin:0 auto;
+}
+#headbox{
+    width:1000px;
+    height:600px;
+    margin:0 auto;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+#sidebar_left{
+    width:300px;
+    height:2000px;
+    margin-left:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+    float:left;
+}
+#sidebar_right{
+    width:300px;
+    height:2000px;
+    margin-right:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+    float:right;
+}
+
+#clear{
+    clear:both;
+    width:1258px;
+}
+#footer{
+    width:1330px;
+    height:60px;
+    margin-top:5px;
+    margin-left:5px;
+    margin-bottom:5px;
+}             
+        h1 {text-align:center; font-family:"微軟正黑體"}
+        
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body bgcolor="#F2FCFC" >
+    <form id="form1" runat="server" defaultfocus="Textbox1">
+      <div align="center">  
+          <asp:Button ID="Button2" runat="server" Text=" 新 世 紀 醫 事 檢 驗 所 " Font-Bold="True" Font-Names="微軟正黑體" Font-Size="40pt" ForeColor="#0245A3" BackColor="#F7F09B" BorderColor="#000099" BorderStyle="Double" BorderWidth="10px" OnClick="Button2_Click" CausesValidation="False" />
+          <br />
+        <asp:Label ID="Label2" runat="server" Text="N e w  C e n t u r y  L a b" Font-Bold="True" Font-Names="MS UI Gothic" Font-Size="36pt" ForeColor="#E23E57"></asp:Label>
+        <br /><br />
+    
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" BackColor="#003366" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="14pt" ForeColor="#BDF1F6">
+            <asp:ListItem>關於我們</asp:ListItem>
+            <asp:ListItem>檢驗所資訊</asp:ListItem>
+            <asp:ListItem>簡介與理念</asp:ListItem>
+            <asp:ListItem>檢驗所設備</asp:ListItem>
+            <asp:ListItem>檢驗師介紹</asp:ListItem>
+        </asp:DropDownList>
+        &nbsp;<asp:DropDownList ID="DropDownList3" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged" BackColor="#003366" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="14pt" ForeColor="#BDF1F6">
+            <asp:ListItem>檢驗服務項目</asp:ListItem>
+            <asp:ListItem>檢驗項目</asp:ListItem>
+            <asp:ListItem>檢驗套餐</asp:ListItem>
+        </asp:DropDownList>
+        &nbsp;<asp:DropDownList ID="DropDownList4" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList4_SelectedIndexChanged" BackColor="#003366" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="14pt" ForeColor="#BDF1F6">
+            <asp:ListItem>會員專區</asp:ListItem>
+            <asp:ListItem>會員登入</asp:ListItem>
+            <asp:ListItem>會員註冊</asp:ListItem>
+        </asp:DropDownList>
+        &nbsp;<asp:DropDownList ID="DropDownList5" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList5_SelectedIndexChanged" BackColor="#003366" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="14pt" ForeColor="#BDF1F6">
+            <asp:ListItem>線上預約</asp:ListItem>
+            <asp:ListItem>預約表單</asp:ListItem>
+        </asp:DropDownList>
+        &nbsp;<asp:DropDownList ID="DropDownList6" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList6_SelectedIndexChanged" BackColor="#003366" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="14pt" ForeColor="#BDF1F6">
+            <asp:ListItem>聯絡我們</asp:ListItem>
+            <asp:ListItem>Q&amp;A</asp:ListItem>
+            <asp:ListItem>常見問題</asp:ListItem>
+        </asp:DropDownList>
+        &nbsp;<asp:DropDownList ID="DropDownList7" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList7_SelectedIndexChanged" BackColor="#003366" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="14pt" ForeColor="#BDF1F6">
+            <asp:ListItem>知識庫</asp:ListItem>
+            <asp:ListItem>BMI</asp:ListItem>
+            <asp:ListItem>健康O或X</asp:ListItem>
+        </asp:DropDownList>
+         <br /><br />
+          <asp:Image ID="Image1" runat="server" ImageUrl="~/image/04.JPG" Width="350px" title="新世紀醫事檢驗所" alt="新世紀醫事檢驗所"/>
+          <asp:Image ID="Image2" runat="server" ImageUrl="~/image/05.JPG" Width="350px" title="新世紀醫事檢驗所" alt="新世紀醫事檢驗所"/>
+         <br /><br />
+         <div id="sidebar_left" style="text-align:center">
+            <asp:Button ID="Button1" runat="server" Text="會員登入" Height="36px" OnClick="Button1_Click" Width="191px" BackColor="#FFF0F5" BorderColor="#FFCCCC" BorderStyle="Double" BorderWidth="5px" Font-Bold="True" Font-Italic="False" Font-Names="微軟正黑體" Font-Size="Large" ForeColor="#0245A3" style="margin-bottom: 0px" CausesValidation="False" />
+              <br />
+              <br />
+             <asp:Button ID="Button3" runat="server" Text="線上預約" Height="36px" OnClick="Button3_Click" Width="191px" BackColor="#FFF0F5" BorderColor="#FFCCCC" BorderStyle="Double" BorderWidth="5px" Font-Bold="True" Font-Italic="False" Font-Names="微軟正黑體" Font-Size="Large" ForeColor="#0245A3" style="margin-bottom: 0px" CausesValidation="False" />
+             <br />
+             <br />
+            <a href="#" onclick="window.open('http://www.hpa.gov.tw/Home/Index.aspx')">
+            <img src="Image/1.jpg"border="0" style="width: 200px; " />
+            </a>
+            <a href="#" onclick="window.open('http://www.cdc.gov.tw/rwd')">
+            <img src="Image/2.png" border="0" style="width: 200px; " />
+            </a>
+            <a href="#" onclick="window.open('http://www.ha.org.hk/visitor/ha_index.asp?Lang=CHIB5')">
+            <img src="Image/3.PNG" border="0" style="width: 200px;" />
+            </a>
+            <a href="#" onclick="window.open('http://www.nhi.gov.tw/')">
+            <img src="Image/4.png" border="0" style="width: 200px;" />
+            </a>
+        
+             <br />
+        
+        <br />           
+        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="150px" NextPrevFormat="FullMonth" Width="250px">
+            <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
+            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+            <OtherMonthDayStyle ForeColor="#999999" />
+            <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+            <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
+            <TodayDayStyle BackColor="#CCCCCC" />
+        </asp:Calendar>
+        </div>   
+
+          
+          <div id="sidebar_right" style="text-align:center">             
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnewcenturylab&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" height="500" style="border-style: none; border-color: inherit; border-width: medium; overflow:hidden; width: 300px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          </div>
+
+    </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+         
+         <div id="clear">
+
+         </div>
+
+        <br />
+        <br />
+        <br />
+        <div id="footer" style="text-align:center">
+            <asp:Label ID="Label3" runat="server" Text="營業時間：週一至週六 08 : 30 ~ 19 : 30" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="13pt" ForeColor="#0245A3"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="13pt" ForeColor="#0245A3" Text="地址： 新竹市北區竹光路146號"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="微軟正黑體" Font-Size="13pt" ForeColor="#0245A3" Text="電話： (03) - 5310345"></asp:Label>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+        </div>
+    </form>
+    
+</body>
+
+</html>
